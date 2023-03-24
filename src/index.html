@@ -4,32 +4,90 @@
 
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dolgozat</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
+      <header class="mb-5">
         <h1 class="mb-3">Sablon</h1>
-        <ul class="mb-3">
-            <li>
-                <h5>Név: Borbély Gergő Árpád</h5>
-            </li>
-            <li>
-                <h5>Csoport: Szoft, I-2/N</h5>
-            </li>
-            <li>
-                <h5>Aktuális dátum: 2023.03.24.</h5>
-            </li>
+        <ul>
+          <li>
+            <h5>Név: Borbély Gergő Árpád</h5>
+          </li>
+          <li>
+            <h5>Csoport: Szoft, I-2/N</h5>
+          </li>
+          <li>
+            <h5>Aktuális dátum: 2023.03.24.</h5>
+          </li>
         </ul>
+      </header>
 
-        <form onsubmit="return false;"></form>
+      <main class="col-6">
+        <form onsubmit="startCalc(); return false;">
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="megmunkaltHossz"
+                  placeholder="Megmunkált hossz"
+                />
+                <label for="megmunkaltHossz">Megmunkált hossz</label>
+              </div>
+              <span class="input-group-text">mm</span>
+            </div>
+            <div class="input-group">
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="fordulatonkentiElotolas"
+                  placeholder="Fordulatonkénti előtolás"
+                />
+                <label for="fordulatonkentiElotolas">Fordulatonkénti előtolás</label>
+              </div>
+              <span class="input-group-text">mm</span>
+            </div>
+            <div class="input-group">
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="foorsoFordulatszam"
+                  placeholder="Fordulatonkénti előtolás"
+                />
+                <label for="foorsoFordulatszam">Főorsó fordulatszám</label>
+              </div>
+              <span class="input-group-text">fordulatszám / perc</span>
+            </div>
+            <div class="input-group">
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="megmunkalasiIdo"
+                  placeholder="Megmunkálási idő"
+                />
+                <label for="megmunkalasiIdo">Megmunkálási idő</label>
+              </div>
+              <span class="input-group-text">perc</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Számítás</button>
+        </form>
+      </main>
+
+      <footer></footer>
     </div>
 
     <script src="js/bootstrap.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
