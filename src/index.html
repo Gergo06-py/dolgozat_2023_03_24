@@ -31,27 +31,31 @@
       <main class="col-6">
         <form onsubmit="startCalc(); return false;">
           <div class="mb-3">
-            <div class="input-group">
+            <div class="input-group mb-2">
               <div class="form-floating">
                 <input
                   type="number"
                   class="form-control"
                   id="megmunkaltHossz"
                   placeholder="Megmunkált hossz"
+                  required
                 />
                 <label for="megmunkaltHossz">Megmunkált hossz</label>
               </div>
               <span class="input-group-text">mm</span>
             </div>
-            <div class="input-group">
+            <div class="input-group mb-2">
               <div class="form-floating">
                 <input
                   type="number"
                   class="form-control"
                   id="fordulatonkentiElotolas"
                   placeholder="Fordulatonkénti előtolás"
+                  required
                 />
-                <label for="fordulatonkentiElotolas">Fordulatonkénti előtolás</label>
+                <label for="fordulatonkentiElotolas"
+                  >Fordulatonkénti előtolás</label
+                >
               </div>
               <span class="input-group-text">mm</span>
             </div>
@@ -62,25 +66,27 @@
                   class="form-control"
                   id="foorsoFordulatszam"
                   placeholder="Fordulatonkénti előtolás"
+                  required
                 />
                 <label for="foorsoFordulatszam">Főorsó fordulatszám</label>
               </div>
               <span class="input-group-text">fordulatszám / perc</span>
             </div>
-            <div class="input-group">
-              <div class="form-floating">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="megmunkalasiIdo"
-                  placeholder="Megmunkálási idő"
-                />
-                <label for="megmunkalasiIdo">Megmunkálási idő</label>
-              </div>
-              <span class="input-group-text">perc</span>
-            </div>
           </div>
-          <button type="submit" class="btn btn-primary">Számítás</button>
+
+          <button type="submit" class="btn btn-primary mb-3">Számítás</button>
+
+          <div class="input-group">
+            <input
+              class="form-control"
+              type="number"
+              value=""
+              placeholder="Itt a számítás eredménye fog megjelenni (megmunkálási idő)"
+              id="megmunkalasiIdo"
+              readonly
+            />
+            <span class="input-group-text">perc</span>
+          </div>
         </form>
       </main>
 
